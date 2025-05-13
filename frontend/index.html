@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Salão de beleza especializado em design de unhas em Alumínio/SP. Agende seu horário para manicure, pedicure, unhas de gel e designs personalizados.">
+  <link rel="shortcut icon" href="logo.jpeg" type="Logo Nail Designer Sandrinha ">
+  <title>Nail Designer Sandrinha </title>
+
+  <!-- MANTIDO: link para o CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Adicionado: link para pular para conteúdo principal -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  
+  <!-- MANTIDO: seção principal de cabeçalho -->
+  <header class="hero" role="banner">
+    <div class="hero-overlay">
+      <!-- MANTIDO: barra de navegação -->
+      <nav class="navbar" aria-label="Navegação principal">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="menu" class="menu">
+          <!-- MANTIDO: navegação entre seções -->
+          <li><a href="#sobre" aria-current="page">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#agendar">Agendamento</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <!-- NOVO: link de login -->
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+
+      <!-- MANTIDO: texto de chamada no cabeçalho -->
+      <div class="hero-text">
+        <h1></h1>
+        <p>Agende seu horário com quem entende de cuidado e estilo</p>
+        <!-- Adicionado: link para agendamento no hero -->
+        <a href="#agendar" class="cta-button">Agendar agora</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- MANTIDO: seção "Sobre Mim" -->
+    <section id="sobre" class="sobre" aria-labelledby="sobre-heading">
+      <h2 id="sobre-heading">Sobre Mim</h2>
+      <p>Sou Alecsandra, profissional apaixonada pelo universo da beleza e especialista em unhas. Com dedicação e carinho, transformo o cuidado com suas mãos e pés em uma experiência relaxante e especial. Aqui cada cliente é única e cada detalhe importa!</p>
+      <!-- Adicionado: foto da profissional com texto alternativo -->
+      <img src="sandrinha.jpg" alt="Alecsandra, profissional de design de unhas sorrindo em seu salão" class="profile-photo">
+    </section>
+
+    <!-- MANTIDO: seção de serviços -->
+    <section id="servicos" class="servicos" aria-labelledby="servicos-heading">
+      <h2 id="servicos-heading">Serviços e Preços</h2>
+      <div class="services-grid">
+        <div class="card" tabindex="0">
+          <h3>Manicure</h3>
+          <p>R$ 30,00</p>
+          <p>Cuidados completos para suas mãos</p>
+        </div>
+        <div class="card" tabindex="0">
+          <h3>Pedicure</h3>
+          <p>R$ 35,00</p>
+          <p>Tratamento especial para seus pés</p>
+        </div>
+        <div class="card" tabindex="0">
+          <h3>Unhas de Gel</h3>
+          <p>R$ 70,00</p>
+          <p>Durabilidade e brilho intenso</p>
+        </div>
+        <div class="card" tabindex="0">
+          <h3>Design de Unhas</h3>
+          <p>R$ 50,00</p>
+          <p>Criações personalizadas para seu estilo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANTIDO: galeria de fotos -->
+    <section id="galeria" class="galeria" aria-labelledby="galeria-heading">
+      <h2 id="galeria-heading">Galeria de Fotos</h2>
+      <div class="galeria-container">
+        <!-- MANTIDO: imagens ilustrativas com texto alternativo melhorado -->
+        <figure>
+          <img src="mao1.jpg" alt="Unhas decoradas com esmalte vermelho e detalhes em branco em mãos femininas">
+          <figcaption>Design vermelho e branco</figcaption>
+        </figure>
+        <figure>
+          <img src="mao2.jpg" alt="Unhas decoradas com esmalte azul escuro e padrões geométricos em branco">
+          <figcaption>Padrão geométrico azul</figcaption>
+        </figure>
+        <figure>
+          <img src="mao3.jpg" alt="Unhas verdes com detalhes florais em branco e dourado">
+          <figcaption>Flores verdes e brancas</figcaption>
+        </figure>
+        <figure>
+          <img src="mao4.jpg" alt="Unhas decoradas com tema de vaca, alternando entre preto com manchas brancas e rosa">
+          <figcaption>Temas personalizados</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MANTIDO: formulário de agendamento -->
+    <section id="agendar" class="agendamento" aria-labelledby="agendar-heading">
+      <h2 id="agendar-heading">Agende Seu Horário</h2>
+      <form id="formAgendamento" aria-label="Formulário de agendamento">
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="servico">Serviço desejado</label>
+          <select id="servico" name="servico" required>
+            <option value="">Selecione um serviço</option>
+            <option value="Manicure">Manicure</option>
+            <option value="Pedicure">Pedicure</option>
+            <option value="Unhas de Gel">Unhas de Gel</option>
+            <option value="Design de Unhas">Design de Unhas</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="data">Data</label>
+          <input type="date" id="data" name="data" required>
+        </div>
+        <div class="form-group">
+          <label for="hora">Horário</label>
+          <input type="time" id="hora" name="hora" required>
+        </div>
+        <button type="submit" class="submit-button">Agendar</button>
+      </form>
+      <div id="mensagem" role="alert"></div>
+    </section>
+
+    <!-- MODIFICADO: seção de contato agora inclui funcionamento, whatsapp e instagram -->
+    <section id="contato" class="contato" aria-labelledby="contato-heading">
+      <h2 id="contato-heading">Contato e Localização</h2>
+      <!-- ADICIONADO: horário de funcionamento e chamada para contato -->
+      <div class="contact-info">
+        <h3>Funcionamento</h3>
+        <p><strong>Segunda a Sábado:</strong> das 9h às 18h</p>
+        
+        <h3>Entre em contato</h3>
+        <p>WhatsApp: <a href="https://wa.me/+5511969137822" class="whatsapp-link">(11) 96913-7822</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sandrinhamanicure31?igsh=bXljdzF1c250Nm1j" class="instagram-link">@sandrinhamanicure31</a></p>
+        
+        <h3>Endereço</h3>
+        <p><br>Alumínio/SP</p>
+      </div>
+
+      <!-- MANTIDO: mapa do Google Maps da cidade com título -->
+      <div class="map-container">
+        <h3>Localização no mapa</h3>
+        <iframe 
+          src="https://www.google.com/maps?q=Alum%C3%ADnio,+SP&output=embed" 
+          width="100%" 
+          height="300" 
+          style="border:0;"
+          title="Mapa mostrando a localização do salão em Alumínio/SP"
+          aria-label="Mapa interativo da localização do salão"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODIFICADO: rodapé atualizado com ícones sociais -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <!-- MANTIDO: direitos autorais, porém com melhorias -->
+      <p>© 2025 Nail Designer Sandrinha - Todos os direitos reservados</p>
+
+      <!-- ADICIONADO: ícones do WhatsApp e Instagram com links e textos descritivos -->
+      <div class="social-icons">
+        <a href="https://wa.me/+5511969137822" target="_blank" aria-label="WhatsApp - Entre em contato pelo WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span class="sr-only">WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/sandrinhamanicure31?igsh=bXljdzF1c250Nm1j" target="_blank" aria-label="Instagram - Siga-nos no Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Adicionado: botão de voltar ao topo -->
+  <a href="#top" class="back-to-top" aria-label="Voltar ao topo da página">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+  <!-- MANTIDO: script para alternar menu (útil em versões responsivas) -->
+  <script>
+    // Menu toggle acessível
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    
+    menuToggle.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('show');
+    });
+    
+    // Validação do formulário
+    document.getElementById('formAgendamento').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const mensagem = document.getElementById('mensagem');
+      
+      mensagem.textContent = `Obrigado, ${nome}! Seu agendamento foi recebido. Entraremos em contato para confirmação.`;
+      mensagem.setAttribute('role', 'alert');
+      this.reset();
+    });
+    
+    // Skip link focus
+    document.querySelector('.skip-link').addEventListener('click', function() {
+      document.getElementById('main-content').setAttribute('tabindex', '-1');
+      document.getElementById('main-content').focus();
+    });
+  </script>
+</body>
+</html>

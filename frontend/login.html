@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo.jpeg" type="Logo Nail Designer Sandrinha ">
+  <title>Login - Nail Designer Sandrinha</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="login-container">
+    <h2>Área Administrativa</h2>
+    <form id="formLogin">
+      <label for="loginEmail">E-mail:</label>
+      <input type="email" id="loginEmail" required placeholder="Digite seu e-mail">
+
+      <label for="loginSenha">Senha:</label>
+      <input type="password" id="loginSenha" required placeholder="Digite sua senha">
+
+      <button type="submit">Entrar</button>
+    </form>
+    <div id="mensagemLogin" style="margin-top: 10px; color: red;"></div>
+  </main>
+
+  <script>
+    document.getElementById('formLogin').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('loginEmail').value;
+      const senha = document.getElementById('loginSenha').value;
+      const mensagem = document.getElementById('mensagemLogin');
+
+      // Substitua pelos dados desejados
+      const emailCorreto = "admin@sandrinha.com";
+      const senhaCorreta = "123456";
+
+      if (email === emailCorreto && senha === senhaCorreta) {
+        window.location.href = "admin.html";
+      } else {
+        mensagem.textContent = "E-mail ou senha incorretos!";
+      }
+    });
+  </script>
+</body>
+</html>

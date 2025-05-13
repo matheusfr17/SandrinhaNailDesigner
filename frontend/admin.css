@@ -1,0 +1,185 @@
+/* Estilos para o Painel Administrativo - Consistente com o Design System */
+
+:root {
+  --primary-color: #ff6b8b;
+  --secondary-color: #a78bfa;
+  --dark-color: #4a4a4a;
+  --light-color: #f8f9fa;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --error-color: #f44336;
+  --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --transition: all 0.3s ease;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 10px;
+}
+
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+/* Acessibilidade: Foco Visível */
+:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+}
+
+/* Botão de Logout */
+button#logoutBtn {
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+button#logoutBtn:hover, 
+button#logoutBtn:focus {
+  background-color: #f3f3f3;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Conteúdo Principal */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Container da Tabela */
+.tabela-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin: 2rem auto;
+  overflow-x: auto; /* Para tabelas responsivas */
+}
+
+/* Estilos da Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: var(--light-color);
+  position: sticky;
+  top: 0;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  font-weight: 600;
+  color: var(--dark-color);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+tr:hover {
+  background-color: rgba(255, 107, 139, 0.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .tabela-container {
+    padding: 1rem;
+  }
+  
+  th, td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  button#logoutBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  table {
+    font-size: 0.85rem;
+  }
+}
+
+/* Efeitos de Transição */
+tr {
+  transition: var(--transition);
+}
+
+/* Melhorias de Acessibilidade para Tabela */
+caption {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+th[scope="col"] {
+  text-align: left;
+}
+
+th[scope="row"] {
+  font-weight: normal;
+}
+
+/* Adicionando zebra striping para melhor legibilidade */
+tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+tbody tr:nth-child(odd):hover {
+  background-color: rgba(255, 107, 139, 0.05);
+}
